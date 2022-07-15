@@ -74,7 +74,7 @@ int main()
 
     for (int i = 0; i < 1000000; i++) {
         std::cout << "s";
-        uint64_t size = MEG * 1000LL * 2LL;
+        uint64_t size = MEG * 1000LL * 8LL;
         MemTest* pmemTest = new MemTest(size);
       //  pmemTest->walk();
         pmemTest->stride(10);
