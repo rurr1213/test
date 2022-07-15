@@ -86,9 +86,6 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="D3D12RaytracingProceduralGeometry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
