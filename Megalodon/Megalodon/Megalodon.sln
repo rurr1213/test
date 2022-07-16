@@ -8,9 +8,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D3D12xGPU", "..\D3D12xGPU\D3D12xGPU.vcxproj", "{9337191E-8566-464A-A0F7-622DC54DCB65}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Megalodon", "Megalodon.vcxproj", "{4F95A448-E1C0-486E-8E63-1F987914D2F0}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0C266269-AC0C-41B0-9D25-0117DC23CFC7} = {0C266269-AC0C-41B0-9D25-0117DC23CFC7}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
