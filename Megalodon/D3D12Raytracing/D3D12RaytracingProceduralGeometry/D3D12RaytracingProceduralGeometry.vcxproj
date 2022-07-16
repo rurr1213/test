@@ -43,7 +43,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>bin\$(Platform)\$(Configuration)\</OutDir>
+    <OutDir>$(ProjectDir)..\..\bin\</OutDir>
     <IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
     <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)..\Build_VS15\$(Platform)\$(Configuration)\Output\$(ProjectName)</IncludePath>
     <PostBuildEventUseInBuild>
@@ -52,6 +52,7 @@
     </PreLinkEventUseInBuild>
     <PreBuildEventUseInBuild>
     </PreBuildEventUseInBuild>
+    <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -110,6 +111,10 @@
       <Message>
       </Message>
     </PreBuildEvent>
+    <Lib />
+    <Lib>
+      <OutputFile>$(ProjectDir)..\..\bin\$(TargetName)$(TargetExt)</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
