@@ -45,7 +45,9 @@ int Win32Application::Run(DXSample* pSample, HINSTANCE hInstance, int nCmdShow)
         m_hwnd = CreateWindow(
             windowClass.lpszClassName,
             pSample->GetTitle(),
-            m_windowStyle,
+            // m_windowStyle,
+            // RAVI - Disable the window from being changed
+            m_windowStyle & ~WS_THICKFRAME & ~WS_MINIMIZEBOX & ~WS_MAXIMIZEBOX,
             CW_USEDEFAULT,
             CW_USEDEFAULT,
             windowRect.right - windowRect.left,
@@ -189,13 +191,29 @@ LRESULT CALLBACK Win32Application::WindowProc(HWND hWnd, UINT message, WPARAM wP
     switch (message)
     {
     case WM_CREATE:
-    {
-        // Save the DXSample* passed in to CreateWindow.
-        LPCREATESTRUCT pCreateStruct = reinterpret_cast<LPCREATESTRUCT>(lParam);
-        SetWindowLongPtr(hWnd, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(pCreateStruct->lpCreateParams));
-    }
-    return 0;
+        {
+            // Save the DXSample* passed in to CreateWindow.
+            LPCREATESTRUCT pCreateStruct = reinterpret_cast<LPCREATESTRUCT>(lParam);
+            SetWindowLongPtr(hWnd, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(pCreateStruct->lpCreateParams));
+        }
+        return 0;
 
+    case WM_PAINT:
+        if (pSample)
+        {
+            pSample->OnUpdate();
+            pSample->OnRender();
+        }
+        return 0;
+
+    case WM_DESTROY:
+        PostQuitMessage(0);
+        return 0;
+
+    /*
+    *  RAVI - Disable all user changes to get a fixed FPS value
+    * 
+    *
     case WM_KEYDOWN:
         if (pSample)
         {
@@ -223,13 +241,6 @@ LRESULT CALLBACK Win32Application::WindowProc(HWND hWnd, UINT message, WPARAM wP
         // Send all other WM_SYSKEYDOWN messages to the default WndProc.
         break;
 
-    case WM_PAINT:
-        if (pSample)
-        {
-            pSample->OnUpdate();
-            pSample->OnRender();
-        }
-        return 0;
 
     case WM_SIZE:
         if (pSample)
@@ -274,26 +285,23 @@ LRESULT CALLBACK Win32Application::WindowProc(HWND hWnd, UINT message, WPARAM wP
         return 0;
 
     case WM_LBUTTONDOWN:
-    {
-        UINT x = LOWORD(lParam);
-        UINT y = HIWORD(lParam);
-        pSample->OnLeftButtonDown(x, y);
-    }
-    return 0;
+        {
+            UINT x = LOWORD(lParam);
+            UINT y = HIWORD(lParam);
+            pSample->OnLeftButtonDown(x, y);
+        }
+        return 0;
 
     case WM_LBUTTONUP:
-    {
-        UINT x = LOWORD(lParam);
-        UINT y = HIWORD(lParam);
-        pSample->OnLeftButtonUp(x, y);
-    }
-    return 0;
-
-    case WM_DESTROY:
-        PostQuitMessage(0);
+        {
+            UINT x = LOWORD(lParam);
+            UINT y = HIWORD(lParam);
+            pSample->OnLeftButtonUp(x, y);
+        }
         return 0;
-    }
 
+        */
+    }
     // Handle any messages the switch statement didn't.
     return DefWindowProc(hWnd, message, wParam, lParam);
 }

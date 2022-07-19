@@ -1090,6 +1090,7 @@ void D3D12RaytracingProceduralGeometry::OnKeyDown(UINT8 key)
 void D3D12RaytracingProceduralGeometry::OnUpdate()
 {
     m_timer.Tick();
+    //Sleep(100);
     CalculateFrameStats();
     float elapsedTime = static_cast<float>(m_timer.GetElapsedSeconds());
     auto frameIndex = m_deviceResources->GetCurrentFrameIndex();
