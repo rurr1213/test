@@ -83,8 +83,10 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     return RegisterClassExW(&wcex);
 }
 
-extern int WinMainRaytracingPreceduralGeometry(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow);
+int WINAPI WinMainRaytracingPreceduralGeometry(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow);
 int WINAPI WinMainD3D12xGPU(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow);
+int test1(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow);
+#include "GPU/D3D12Raytracing/D3D12RaytracingProceduralGeometry/MainRaytracingProceduralGeometry.h"
 
 //
 //   FUNCTION: InitInstance(HINSTANCE, int)
@@ -112,8 +114,11 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
 
-   WinMainRaytracingPreceduralGeometry(hInstance, 0, 0, nCmdShow);
-//   WinMainD3D12xGPU(hInstance, 0, 0, nCmdShow);
+   MainRaytracingProceduralGeometry mainRaytracingPreceduralGeometry;
+//   mainRaytracingPreceduralGeometry.run(hInstance, 0, 0, nCmdShow);
+
+//    WinMainRaytracingPreceduralGeometry(hInstance, 0, 0, nCmdShow);
+   WinMainD3D12xGPU(hInstance, 0, 0, nCmdShow);
 
 
    return TRUE;

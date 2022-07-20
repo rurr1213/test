@@ -11,10 +11,19 @@
 
 #include "stdafx.h"
 #include "D3D12RaytracingProceduralGeometry.h"
+#include "MainRaytracingProceduralGeometry.h"
 
 _Use_decl_annotations_
-int WINAPI WinMainRaytracingPreceduralGeometry(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
+int WINAPI WinMainRaytracingProceduralGeometry(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
 {
     D3D12RaytracingProceduralGeometry sample(1280, 720, L"D3D12 Raytracing - Procedural Geometry");
     return Win32Application::Run(&sample, hInstance, nCmdShow);
+}
+
+bool MainRaytracingProceduralGeometry::run(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
+{
+    D3D12RaytracingProceduralGeometry sample(1280, 720, L"D3D12 Raytracing - Procedural Geometry");
+    Win32Application::Run(&sample, hInstance, nCmdShow);
+//    WinMainRaytracingProceduralGeometry(0, 0, "", 0);
+    return true;
 }
