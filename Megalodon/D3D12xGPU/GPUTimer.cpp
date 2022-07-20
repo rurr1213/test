@@ -16,7 +16,7 @@
 #include <exception>
 #include <stdexcept>
 
-using namespace DX;
+using namespace D3D12xGPU;
 
 using Microsoft::WRL::ComPtr;
 

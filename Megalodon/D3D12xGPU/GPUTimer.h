@@ -11,7 +11,7 @@
 
 #pragma once
 
-namespace DX
+namespace D3D12xGPU
 {
     class GPUTimer
     {

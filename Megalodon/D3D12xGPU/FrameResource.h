@@ -28,7 +28,7 @@ public:
     ComPtr<ID3D12Resource> m_constantBuffers[SceneEnums::RenderPass::Count];
     void* m_pConstantBuffersWO[SceneEnums::RenderPass::Count]; // WRITE-ONLY pointers to the constant buffers
 
-    DX::GPUTimer m_gpuTimer;
+    D3D12xGPU::GPUTimer m_gpuTimer;
 
 public:
     FrameResource(ID3D12Device* pDevice, ID3D12CommandQueue* pCommandQueue);
