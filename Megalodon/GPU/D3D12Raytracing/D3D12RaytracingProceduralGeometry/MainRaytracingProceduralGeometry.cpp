@@ -30,7 +30,7 @@ bool MainRaytracingProceduralGeometry::run(HINSTANCE hInstance, HINSTANCE, LPSTR
 
 bool MainRaytracingProceduralGeometry::Do(void)
 {
-    run(hInstance, 0, "", 0);
+    run(hInstance, 0, "", SW_NORMAL);
     return true;
 }
 

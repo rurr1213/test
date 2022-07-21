@@ -3,17 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Megalodon", "Megalodon.vcxproj", "{5DC6DEF1-77E8-4FD9-AFCE-FBF8EFEB0817}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Megalodon", "Megalodon.vcxproj", "{76D8CFBC-B516-40F6-A53C-5DFD02B07D72}"
 	ProjectSection(ProjectDependencies) = postProject
 		{9337191E-8566-464A-A0F7-622DC54DCB65} = {9337191E-8566-464A-A0F7-622DC54DCB65}
 		{0C266269-AC0C-41B0-9D25-0117DC23CFC7} = {0C266269-AC0C-41B0-9D25-0117DC23CFC7}
+		{68766BA1-D1CB-44A8-9A08-7120BC652B71} = {68766BA1-D1CB-44A8-9A08-7120BC652B71}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D3D12RaytracingProceduralGeometry", "GPU\D3D12Raytracing\D3D12RaytracingProceduralGeometry\D3D12RaytracingProceduralGeometry.vcxproj", "{0C266269-AC0C-41B0-9D25-0117DC23CFC7}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D3D12Common", "GPU\D3D12Common\D3D12Common.vcxproj", "{68766BA1-D1CB-44A8-9A08-7120BC652B71}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D3D12xGPU", "GPU\D3D12xGPU\D3D12xGPU.vcxproj", "{9337191E-8566-464A-A0F7-622DC54DCB65}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D3D12RaytracingProceduralGeometry", "GPU\D3D12Raytracing\D3D12RaytracingProceduralGeometry\D3D12RaytracingProceduralGeometry.vcxproj", "{0C266269-AC0C-41B0-9D25-0117DC23CFC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,14 +24,20 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5DC6DEF1-77E8-4FD9-AFCE-FBF8EFEB0817}.Debug|x64.ActiveCfg = Debug|x64
-		{5DC6DEF1-77E8-4FD9-AFCE-FBF8EFEB0817}.Debug|x64.Build.0 = Debug|x64
-		{5DC6DEF1-77E8-4FD9-AFCE-FBF8EFEB0817}.Debug|x86.ActiveCfg = Debug|Win32
-		{5DC6DEF1-77E8-4FD9-AFCE-FBF8EFEB0817}.Debug|x86.Build.0 = Debug|Win32
-		{5DC6DEF1-77E8-4FD9-AFCE-FBF8EFEB0817}.Release|x64.ActiveCfg = Release|x64
-		{5DC6DEF1-77E8-4FD9-AFCE-FBF8EFEB0817}.Release|x64.Build.0 = Release|x64
-		{5DC6DEF1-77E8-4FD9-AFCE-FBF8EFEB0817}.Release|x86.ActiveCfg = Release|Win32
-		{5DC6DEF1-77E8-4FD9-AFCE-FBF8EFEB0817}.Release|x86.Build.0 = Release|Win32
+		{76D8CFBC-B516-40F6-A53C-5DFD02B07D72}.Debug|x64.ActiveCfg = Debug|x64
+		{76D8CFBC-B516-40F6-A53C-5DFD02B07D72}.Debug|x64.Build.0 = Debug|x64
+		{76D8CFBC-B516-40F6-A53C-5DFD02B07D72}.Debug|x86.ActiveCfg = Debug|Win32
+		{76D8CFBC-B516-40F6-A53C-5DFD02B07D72}.Debug|x86.Build.0 = Debug|Win32
+		{76D8CFBC-B516-40F6-A53C-5DFD02B07D72}.Release|x64.ActiveCfg = Release|x64
+		{76D8CFBC-B516-40F6-A53C-5DFD02B07D72}.Release|x64.Build.0 = Release|x64
+		{76D8CFBC-B516-40F6-A53C-5DFD02B07D72}.Release|x86.ActiveCfg = Release|Win32
+		{76D8CFBC-B516-40F6-A53C-5DFD02B07D72}.Release|x86.Build.0 = Release|Win32
+		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Debug|x64.ActiveCfg = Debug|x64
+		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Debug|x64.Build.0 = Debug|x64
+		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Debug|x86.ActiveCfg = Debug|x64
+		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Release|x64.ActiveCfg = Release|x64
+		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Release|x64.Build.0 = Release|x64
+		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Release|x86.ActiveCfg = Release|x64
 		{68766BA1-D1CB-44A8-9A08-7120BC652B71}.Debug|x64.ActiveCfg = Debug|x64
 		{68766BA1-D1CB-44A8-9A08-7120BC652B71}.Debug|x64.Build.0 = Debug|x64
 		{68766BA1-D1CB-44A8-9A08-7120BC652B71}.Debug|x86.ActiveCfg = Debug|Win32
@@ -45,17 +52,11 @@ Global
 		{9337191E-8566-464A-A0F7-622DC54DCB65}.Release|x64.ActiveCfg = Release|x64
 		{9337191E-8566-464A-A0F7-622DC54DCB65}.Release|x64.Build.0 = Release|x64
 		{9337191E-8566-464A-A0F7-622DC54DCB65}.Release|x86.ActiveCfg = Release|x64
-		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Debug|x64.ActiveCfg = Debug|x64
-		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Debug|x64.Build.0 = Debug|x64
-		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Debug|x86.ActiveCfg = Debug|x64
-		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Release|x64.ActiveCfg = Release|x64
-		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Release|x64.Build.0 = Release|x64
-		{0C266269-AC0C-41B0-9D25-0117DC23CFC7}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1A50C62A-C8B6-4256-8FA7-8795EA714310}
+		SolutionGuid = {7C3CB3F2-507A-4AC8-9D51-2589FB1E8123}
 	EndGlobalSection
 EndGlobal
