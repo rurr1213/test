@@ -159,12 +159,16 @@ int WINAPI WinMainRaytracingPreceduralGeometry(HINSTANCE hInstance, HINSTANCE, L
 int WINAPI WinMainD3D12xGPU(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow);
 int test1(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow);
 #include "GPU/D3D12Raytracing/D3D12RaytracingProceduralGeometry/MainRaytracingProceduralGeometry.h"
+#include "GPU/D3D12xGPU/MainD3D12xGPU.h"
 
 void CMegalodonDlg::OnBnClickedButton1()
 {
 	// TODO: Add your control notification handler code here
 	MainRaytracingProceduralGeometry mainRaytracingPreceduralGeometry;
 	mainRaytracingPreceduralGeometry.create(0);
+
+//	MainD3D12xGPU mainD3D12xGPU;
+//	mainD3D12xGPU.create(0);
 
 	//   mainRaytracingPreceduralGeometry.run(hInstance, 0, 0, nCmdShow);
 
