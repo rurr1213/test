@@ -115,10 +115,12 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    UpdateWindow(hWnd);
 
    MainRaytracingProceduralGeometry mainRaytracingPreceduralGeometry;
+   mainRaytracingPreceduralGeometry.create(hInstance);
+
 //   mainRaytracingPreceduralGeometry.run(hInstance, 0, 0, nCmdShow);
 
 //    WinMainRaytracingPreceduralGeometry(hInstance, 0, 0, nCmdShow);
-   WinMainD3D12xGPU(hInstance, 0, 0, nCmdShow);
+//   WinMainD3D12xGPU(hInstance, 0, 0, nCmdShow);
 
 
    return TRUE;
@@ -146,6 +148,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             {
             case IDM_ABOUT:
                 DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                break;
+            case ID_FILE_GPULOAD:
+                DestroyWindow(hWnd);
                 break;
             case IDM_EXIT:
                 DestroyWindow(hWnd);
